@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+<title>Таблица</title>
+{% endblock %}
+
+
+{% block main %}
+    <h6>Таблица по-умолчанию</h6>
+    <table class="table table-bordered">
+        <tbody style="border-top: 3.0px;">
+        <tr>
+            {% for name in name_list %}
+                <td>{{ name }}</td>
+            {% endfor %}
+        </tr>
+        {% for object in objects_values %}
+            <tr>
+                {% for key, value in object.items %}
+                    <td>
+                        {{ value }}
+                    </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+        <tbody>
+    </table>
+
+    <h6>Таблица после фильтрации и сортировки</h6>
+    <table class="table table-bordered">
+        <tbody style="border-top: 3.0px;">
+        <tr>
+            {% for name in verbose_name_list %}
+                <td>{{ name }}</td>
+            {% endfor %}
+        </tr>
+        {% for objects_values in objects_values_list %}
+            <tr>
+                {% for item in objects_values %}
+                    <td>
+                        {{ item }}
+                    </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+        <tbody>
+    </table>
+
+    <p><b>Статистика после фильтрации и сортировки</b></p>
+    {#    {% autoescape off %}{{ statics.statics_val }}{% endautoescape %}#}
+    {% for item in statics.statics_val %}
+        {% for k, v in  item.items %}
+            {{ k }}:  {{ v }};
+            {#            {% autoescape off %}{{ k }}:  {{ v }}; {% endautoescape %}#}
+        {% endfor %}
+    {% endfor %}
+
+
+{% endblock %}

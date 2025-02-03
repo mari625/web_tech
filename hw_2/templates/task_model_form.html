@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+<title>Task Model Form</title>
+{% endblock %}
+
+{% block main %}
+    <h2>Задача 1017</h2>
+    <p class="temp"><b>Дано вещественное число A. Вычислить x = a**4, при a < 10; x = a при a > 61, в противном
+    случае x  = a − sin(a**2)).</b></p>
+    <form action= "{% url 'app_1:task_model_form' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <label for="id_submit">&nbsp;</label>
+        <button type="submit" id="id_submit">Отправить</button>
+    </form>
+{% endblock %}
