@@ -1,0 +1,102 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+<title>Home</title>
+{% endblock %}
+
+{% block nav %}
+<li><a href="#self">О себе</a></li>
+<li><a href="#forms">Формы теплиц</a></li>
+<li><a href="#materials">Материалы</a></li>
+<li><a href="#data">Защита</a></li>
+{% endblock %}
+
+{% block main %}
+<div class="title">
+    <h2>Общая информация</h2>
+</div>
+
+<div class="text">
+    <h3 id="self">О себе</h3>
+    <p>Мы поможем вам подобрать лучшую теплицу из самых качественных материалов для вашего загородного дома
+        по доступной цене. Вы сможете найти все популярные формы теплиц и заказать теплицу нужного размера
+        со <a href="other#master_number" style="color: #073826">сборкой</a> в короткие сроки.
+</p>
+</div>
+
+<div class="text">
+    <h3 id="forms">Формы теплиц</h3>
+    <div class="photo-container">
+        <div class="row">
+            <div class="col-4">
+                <figure class="greenhouse">
+                    <a class='btn mx-auto d-block' href='page_1#arka'>
+                            <img src="{% static '/images/arka.jpg' %}" class="mx-auto d-block shadow" style="height: 200px; width: 100%">
+                    </a>
+                    <figcaption class="greenhouse_text"><b>Арочная</b></figcaption>
+                </figure>
+            </div>
+            <div class="col-4">
+                <figure class="greenhouse">
+                    <a class='btn mx-auto d-block' href='page_1#dvuscat'>
+                        <img src="{% static '/images/dvuscat.jpg' %}" class="mx-auto d-block shadow" style="height: 200px; width: 100%">
+                    </a>
+                    <figcaption class="greenhouse_text"><b>Двускатная</b></figcaption>
+                </figure>
+            </div>
+            <div class="col-4">
+                <figure class="greenhouse">
+                    <a class='btn mx-auto d-block' href='page_1#drop'>
+                        <img src="{% static '/images/drop.jpg' %}"  class="mx-auto d-block shadow" style="height: 200px; width: 100%">
+                    </a>
+                    <figcaption class="greenhouse_text"><b>Каплевидная</b></figcaption>
+                </figure>
+            </div>
+            <div class="col-6">
+                <figure class="greenhouse">
+                    <a class='btn mx-auto d-block' href='page_1#straight'>
+                        <img src="{% static '/images/straight.jpg' %}"  class="mx-auto d-block shadow" style="height: 300px; width: 100%">
+                    </a>
+                    <figcaption class="greenhouse_text"><b>Прямостенная</b></figcaption>
+                </figure>
+            </div>
+            <div class="col-6">
+                <figure class="greenhouse">
+                    <a class='btn mx-auto d-block' href='page_1#mitlaider'>
+                        <img src="{% static '/images/mitlaider.png' %}" class="mx-auto d-block shadow" style="height: 300px; width: 100%">
+                    </a>
+                    <figcaption class="greenhouse_text"><b>По митлайдеру</b></figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text">
+    <h3 id="materials" style="margin-bottom: 30px">Материалы и виды теплиц</h3>
+    <div class="materials_container">
+        <div class="row">
+            <div class="col-6">
+                <img src="{{ 'https://100pillars.in/wp-content/uploads/2023/04/Building-materials-industry-%E2%80%93-Retrospect-2020-min.jpg' }}" width="100%">
+            </div>
+            <div class="col-6">
+                <ul>
+                    <li>Пленочные</li>
+                    <li>Оцинкованные</li>
+                    <li>Алюминиевые</li>
+                    <li>Из монолитного поликарбоната</li>
+                    <li>Металлические</li>
+                    <li>Стеклянные</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text">
+    <h3 id="data">Дата защиты и номер группы</h3>
+    <p><b>Группа:</b> 7</p>
+    <p><b>Дата защиты:</b> 14 марта</p>
+</div>
+{% endblock %}

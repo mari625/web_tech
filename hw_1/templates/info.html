@@ -1,0 +1,102 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+<title>Education</title>
+{% endblock %}
+
+{% block nav %}
+<li><a href="#me">Мои данные</a></li>
+<li><a href="#program">Программа</a></li>
+<li><a href="#course">Мои сокурсники</a></li>
+{% endblock %}
+
+{% block main %}
+    <div class="text">
+        <div class="title">
+            <h2> Я и моя образовательня программа</h2>
+        </div>
+        <h3 id="me">Мои данные: </h3>
+        <ul>
+            <li>Имя: {{mydata.name}}</li>
+            <li>
+                Фото:
+                <span class = "avatar">
+                    <img src = "{% static mydata.photo %}">
+                </span>
+            </li>
+            <li>Почта: {{mydata.email}}</li>
+            <li>Телефон: {{mydata.phone}}</li>
+        </ul>
+    </div>
+
+    <div class="text">
+        <h3 id="program">Программа: </h3>
+        <p><b>Название программы:</b> {{program.name}}</p>
+        <p><b>Описание программы:</b> {{program.description}}</p>
+        <div class="mini_text">
+            <p><b>Руководитель: </b></p>
+            <ul>
+                <li>Имя: {{program.leader.name}}</li>
+                <li>
+                    Фото:
+                    <span class = "avatar">
+                        <img src = "{% static program.leader.photo %}">
+                    </span>
+                </li>
+                <li>Почта: {{program.leader.email}}</li>
+            </ul>
+        </div>
+
+        <div class="mini-text">
+            <p><b>Менеджер: </b></p>
+            <ul>
+                <li>Имя: {{program.manager.name}}</li>
+                <li>
+                    Фото:
+                    <span class = "avatar">
+                        <img src = "{% static program.manager.photo %}">
+                    </span>
+                </li>
+                <li>Почта: {{program.manager.email}}</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="text">
+        <h3 id="course">Мои сокурсники: </h3>
+        <ol>
+            <li>
+                <div class="mini_text">
+                    <p><b>Сокурсник 1: </b></p>
+                    <ul>
+                        <li>
+                            Фото:
+                            <span class = "avatar">
+                                <img src = "{% static students.student_1.photo %}">
+                            </span>
+                        </li>
+                        <li>Почта: {{students.student_1.email}}</li>
+                        <li>Телефон: {{students.student_1.phone}}</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="mini_text">
+                    <p><b>Сокурсник 2: </b></p>
+                    <ul>
+                        <li>
+                            Фото:
+                            <span class = "avatar">
+                                <img src = "{% static students.student_2.photo %}">
+                            </span>
+                        </li>
+                        <li>Почта: {{students.student_2.email}}</li>
+                        <li>Телефон: {{students.student_2.phone}}</li>
+                    </ul>
+                </div>
+            </li>
+        </ol>
+    </div>
+{% endblock %}

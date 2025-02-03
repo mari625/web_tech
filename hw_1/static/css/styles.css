@@ -1,0 +1,123 @@
+body{
+    width: 100%;
+    margin: 0px auto;
+    background-color: #f0fff0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    align-items: center;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #073826;
+    margin-top: 15px;
+}
+
+h3, b, li::marker{
+    color: #073826;
+}
+
+h3{
+    margin-bottom: 20px;
+}
+
+.container{
+    margin-left: auto;
+    padding-right: 120px;
+}
+
+.title{
+    text-align: left;
+}
+
+.section{
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.avatar img{
+    border-radius: 50%;
+    margin: 15px;
+    height: 100px;
+    width: 100px;
+    border: 1px solid #073826;
+}
+
+.greenhouse{
+    text-align: center;
+    align-items: center;
+    width: 80%;
+}
+
+.greenhouse img{
+    border-radius: 10%;
+    border: 1px solid #073826;
+}
+
+.photo-container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.green_card{
+    text-align: center;
+    line-height: 10px;
+    color: #073826;
+}
+
+.green_card img{
+    height: 150px;
+}
+
+.temp{
+    margin-top: 15px;
+}
+
+.navigation {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 0px;
+    position: fixed;
+    right:0;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.nav_list{
+     list-style-type: none;
+}
+
+.nav_list a{
+    color: #677363;
+    text-decoration: none;
+}
+
+.materials_container{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.materials_container img{
+    margin-right: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #073826;
+    border-radius: 20px;
+}
+
+.materials_container ul{
+    padding-top: 60px;
+    padding-left: 40px;
+}
+
+.text{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.mini_text{
+    margin-bottom: 40px;
+}

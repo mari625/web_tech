@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+<title>Task</title>
+{% endblock %}
+
+{% block nav %}
+<li><a href="#task 1017">Задача 1017</a></li>
+{% endblock %}
+
+{% block main %}
+<div class="title">
+    <h2 id="task 1017">Задача 1017</h2>
+</div>
+<p class="temp"><b>Дано вещественное число A. Вычислить x = a**4, при a < 10; x = a при a > 61, в противном
+    случае x  = a − sin(a**2)).</b></p>
+<form action="/task" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Решить задачу">
+    {% if flag == False %}
+        <p class="temp" style="color: #c41e3a;">Нужно ввести <b style="color: #c41e3a;">вещественное число</b> !</p>
+    {% endif %}
+    <p class="temp">Ответ: {{result}}</p>
+</form>
+{% endblock %}

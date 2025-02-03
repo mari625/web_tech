@@ -1,0 +1,127 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+<title>Page 1</title>
+{% endblock %}
+
+{% block nav %}
+<li><a href="#arka">Арочные</a></li>
+<li><a href="#dvuscat">Двускатные</a></li>
+<li><a href="#drop">Каплевидные</a></li>
+<li><a href="#straight">Прямостенные</a></li>
+<li><a href="#mitlaider">По митлайдеру</a></li>
+{% endblock %}
+
+{% block main %}
+<h2>Модели теплиц</h2>
+
+<div class="section">
+    <h3 id="arka">Арочные</h3>
+    <p>Арочные теплицы самые доступные по цене и удобны в установке.
+        Их удобно расширять, добавляя новые секции. За счет формы с теплицы довольно лего соскальзывает снег</p>
+    <div class="card bg-success bg-opacity-10">
+        <div class="card-body shadow">
+            <ul class="d-flex flex-row flex-wrap">
+                {% for object in data.arka %}
+                <li class="m-2 list-group-item bg-light border border-success p-2 rounded shadow">
+                    <span class="green_card">
+                        <img class="border border-success rounded" src="{% static object.img %}" width="200px" style="margin: 8px" />
+                        <h6>Модель: {{ object.id }}</h6>
+                        <p> Цена: {{ object.price }}</p>
+                    </span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h3 id="dvuscat">Двускатные</h3>
+    <p>Двускатные теплицы довольно популярны за счет своей устойчивости и надежности. Они
+        практически равномерны по высоте, что позволяет свободно перемещаться внутри теплицы, удобно размещать грядки
+        и упрощает установку вентиляции</p>
+    <div class="card bg-success bg-opacity-10">
+        <div class="card-body shadow">
+            <ul class="d-flex flex-row flex-wrap">
+                {% for object in data.dvuscat %}
+                <li class="m-2 list-group-item bg-light border border-success p-2 rounded shadow">
+                    <span class="green_card">
+                        <img class="border border-success rounded" src="{% static object.img %}" width="200px" style="margin: 8px" />
+                        <h6>Модель: {{ object.id }}</h6>
+                        <p> Цена: {{ object.price }}</p>
+                    </span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h3 id="drop">Каплевидные</h3>
+    <p>Каплевидные теплицы имеют интересный дизайн и идеально подходят районам с большим количеством осадков. С таких теплиц хорошо сходит снег,
+        создавая минимальную нагрузку на каркас.</p>
+    <div class="card bg-success bg-opacity-10">
+        <div class="card-body shadow">
+            <ul class="d-flex flex-row flex-wrap">
+                {% for object in data.drop %}
+                    <li class="m-2 list-group-item bg-light border border-success p-2 rounded shadow">
+                        <span class="green_card">
+                            <img class="border border-success rounded" src="{{ object.img }}" width="200px" style="margin: 8px" />
+                            <h6>Модель: {{ object.id }}</h6>
+                            <p> Цена: {{ object.price }}</p>
+                        </span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h3 id="straight">Прямостенные</h3>
+    <p>Прямостенные теплицы сочетают в себе плюсы арочных теплиц и двускатных. За счет формы крыши они
+        лучше двускатных обеспечат соскальзывание снега, сохранив при этом преимущества практически одинаковой
+        высоты теплицы.</p>
+    <div class="card bg-success bg-opacity-10">
+        <div class="card-body shadow">
+            <ul class="d-flex flex-row flex-wrap">
+                {% for object in data.straight %}
+                    <li class="m-2 list-group-item bg-light border border-success p-2 rounded shadow">
+                        <span class="green_card">
+                            <img class="border border-success rounded" src="{{ object.img }}" width="200px" style="margin: 8px" />
+                            <h6>Модель: {{ object.id }}</h6>
+                            <p> Цена: {{ object.price }}</p>
+                        </span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h3 id="mitlaider">По митлайдеру</h3>
+    <p> Теплицы по митлайдеру имеют встроенные форточек-фрамуг внизу и верху теплицы.
+        Преимуществом такой теплицы является не выветривание, а вентиляция воздуха, что помогает
+        избежать заболеваний растений из-за повышенной влажности и температуры.</p>
+    <div class="card bg-success bg-opacity-10">
+        <div class="card-body shadow">
+            <ul class="d-flex flex-row flex-wrap">
+                {% for object in data.mitlaider %}
+                        <li class="m-2 list-group-item bg-light border border-success p-2 rounded shadow">
+                            <span class="green_card">
+                                <img class="border border-success rounded" src="{{ object.img }}" width="200px" style="margin: 8px" />
+                                <h6>Модель: {{ object.id }}</h6>
+                                <p> Цена: {{ object.price }}</p>
+                            </span>
+                        </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+<title>Other</title>
+{% endblock %}
+
+{% block nav %}
+<li><a href="#contact">Контакты</a></li>
+<li><a href="#adress">Адрес</a></li>
+{% endblock %}
+
+{% block main %}
+<h3 id="concat" style="margin-top: 15px;">Контакты</h3>
+<p style="line-height: 2">Телефон: {{data.telephone}} <br>
+    Электронная почта: {{data.mail}} <br>
+    <span id="master_number">Телефон установщика: {{data.master}}</span> </p>
+
+<h3 id="adress">Наш адрес:</h3>
+<p>{{data.adress}}</p>
+{% endblock %}
